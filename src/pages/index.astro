@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Fingerprinter from '../components/Fingerprinter';
+---
+
+<Layout title="Welcome to Astro.">
+	<Fingerprinter client:only />
+</Layout>
+
+<style is:global>
+	#json {
+		background-color: #F4F5F7;
+		padding: 20px;
+		border-radius: 5px;
+		height: auto;
+		overflow: auto;
+		word-break: normal;
+		word-wrap: normal;
+		white-space: pre;
+	}
+
+	.string { color: green; }
+	.number { color: darkorange; }
+	.boolean { color: blue; }
+	.null { color: magenta; }
+	.key { color: red; }
+</style>
